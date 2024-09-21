@@ -17,6 +17,9 @@ app.use(cors())
 app.use(express.json());
 
 // Routes
+app.use("/", (req, res) => {
+    res.send("Hello world");
+});
 app.use("/api/contact", contactRoutes);
 
 const PORT = process.env.PORT || 5001;
